@@ -22,7 +22,7 @@ This app queries data from Open Wearther Map using an API key. These keys are fr
 - Within that file put the following code: 
 ```swift
 struct Constants {
-static let apiKey = "INSERT YOUR API KEY HERE"
+    static let apiKey = "INSERT YOUR API KEY HERE"
 }
 ```
 - Run the app in the simulator or on your device
