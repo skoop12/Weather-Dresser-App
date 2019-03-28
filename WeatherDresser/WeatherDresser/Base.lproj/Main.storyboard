@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aXu-GU-9Rc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First Time View Controller-->
+        <scene sceneID="FQe-It-gC3">
+            <objects>
+                <viewController storyboardIdentifier="FirstTimeViewController" id="JBq-c0-Q5s" customClass="FirstTimeViewController" customModule="WeatherDresser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GYa-cC-nOI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gz-YO-k8s">
+                                <rect key="frame" x="37.5" y="302.5" width="300" height="62"/>
+                                <color key="backgroundColor" name="brightBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="pjd-em-4od">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="35"/>
+                                <state key="normal" title="Get My Weather">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="showWeather:" destination="JBq-c0-Q5s" eventType="touchUpInside" id="u0l-ar-8ni"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rain" translatesAutoresizingMaskIntoConstraints="NO" id="86H-uG-aAC">
+                                <rect key="frame" x="16" y="557" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="90" id="SPz-7o-plC">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="90" id="n0k-2k-ty0">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="WRl-Xb-csm">
+                                <rect key="frame" x="142.5" y="557" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="90" id="0pC-BV-nNY">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="90" id="CQi-01-kMr">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thunderstorm" translatesAutoresizingMaskIntoConstraints="NO" id="v2t-Rh-yMU">
+                                <rect key="frame" x="269" y="557" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="90" id="XFl-9f-T0o">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="90" id="eSe-Qc-ad9">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="lightBlue"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1PH-3X-lAX" firstAttribute="bottom" secondItem="WRl-Xb-csm" secondAttribute="bottom" constant="20" id="2nc-q6-Kxl"/>
+                            <constraint firstItem="1PH-3X-lAX" firstAttribute="trailing" secondItem="v2t-Rh-yMU" secondAttribute="trailing" constant="16" id="84c-A7-STt"/>
+                            <constraint firstItem="86H-uG-aAC" firstAttribute="leading" secondItem="1PH-3X-lAX" secondAttribute="leading" constant="16" id="CuU-bq-t47"/>
+                            <constraint firstItem="1PH-3X-lAX" firstAttribute="bottom" secondItem="v2t-Rh-yMU" secondAttribute="bottom" constant="20" id="NHg-CV-up0"/>
+                            <constraint firstItem="9Gz-YO-k8s" firstAttribute="centerY" secondItem="GYa-cC-nOI" secondAttribute="centerY" id="Sxa-rB-HFz"/>
+                            <constraint firstItem="9Gz-YO-k8s" firstAttribute="centerX" secondItem="GYa-cC-nOI" secondAttribute="centerX" id="Z8q-Zu-JwF"/>
+                            <constraint firstItem="WRl-Xb-csm" firstAttribute="centerX" secondItem="GYa-cC-nOI" secondAttribute="centerX" id="a5f-PQ-es0"/>
+                            <constraint firstItem="1PH-3X-lAX" firstAttribute="bottom" secondItem="86H-uG-aAC" secondAttribute="bottom" constant="20" id="npA-nw-EhD"/>
+                            <constraint firstItem="1PH-3X-lAX" firstAttribute="bottom" secondItem="86H-uG-aAC" secondAttribute="bottom" constant="20" id="rp8-B4-XPn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1PH-3X-lAX"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstGetWeatherButton" destination="9Gz-YO-k8s" id="mAB-oe-uJU"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showWeatherView" id="m0T-hb-ldM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W91-TQ-NJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="533.60000000000002" y="-646.32683658170924"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherDresser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K50-wS-jFY">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJC-Ny-I2P">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="613.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ygz-ET-7lk">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="613.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RAx-2c-wQo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q5-Rb-IiC">
+                                                                <rect key="frame" x="8" y="0.0" width="156" height="80"/>
+                                                                <color key="backgroundColor" name="brightBlue"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="7kQ-Tm-VaU">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="JSE-rx-upv">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                                                    </constraint>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                <state key="normal" title="My Weather">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
+                                                                </variation>
+                                                                <connections>
+                                                                    <action selector="callAPI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqU-fK-WAw"/>
+                                                                </connections>
+                                                            </button>
+                                                            <view contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="nBR-tL-kxO">
+                                                                <rect key="frame" x="172" y="0.0" width="68" height="80"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="TP" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1UC-DF-Oor">
+                                                                <rect key="frame" x="248" y="0.0" width="61" height="80"/>
+                                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="60"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ys-Nz-mId">
+                                                                <rect key="frame" x="317" y="0.0" width="50" height="80"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="azF-oj-K0C"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="nBR-tL-kxO" firstAttribute="leading" secondItem="RAx-2c-wQo" secondAttribute="leading" constant="172" id="i5L-VS-oSL">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="260"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="95" id="jRG-Ro-9Aa"/>
+                                                            <constraint firstAttribute="trailing" secondItem="nBR-tL-kxO" secondAttribute="trailing" constant="135" id="oyh-rs-jdO">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="0.0" right="8"/>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W1n-Gn-0PG">
+                                                        <rect key="frame" x="0.0" y="90" width="375" height="113.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="Gpp-qt-Kt3">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="TpW-YP-pXz">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Very Long Weather Description">
+                                                                <attributes>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <font key="NSFont" size="40" name="ChalkboardSE-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Very Long Weather Description">
+                                                                    <attributes>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="NSFont" size="50" name="ChalkboardSE-Regular"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </variation>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6E6-pH-UeA">
+                                                        <rect key="frame" x="0.0" y="213.5" width="375" height="400"/>
+                                                        <subviews>
+                                                            <view alpha="0.80000000000000004" contentMode="scaleToFill" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="9FK-rg-HZS">
+                                                                <rect key="frame" x="37.5" y="0.0" width="300" height="300"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Skx-ov-skA">
+                                                                        <rect key="frame" x="28" y="45" width="243" height="209"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" name="gold"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="Skx-ov-skA" secondAttribute="bottom" constant="46" id="5gJ-1H-939"/>
+                                                                    <constraint firstItem="Skx-ov-skA" firstAttribute="leading" secondItem="9FK-rg-HZS" secondAttribute="leading" constant="28" id="Bzz-QS-qhd"/>
+                                                                    <constraint firstItem="Skx-ov-skA" firstAttribute="top" secondItem="9FK-rg-HZS" secondAttribute="top" constant="45" id="CtU-nQ-RIJ"/>
+                                                                    <constraint firstAttribute="width" constant="300" id="KuG-yv-pRd">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="width" secondItem="9FK-rg-HZS" secondAttribute="height" multiplier="1:1" id="NBf-HE-oUp"/>
+                                                                    <constraint firstAttribute="height" constant="300" id="epG-Qd-wdA">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="trailing" secondItem="Skx-ov-skA" secondAttribute="trailing" constant="29" id="fZ1-NG-x8V"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="oGe-5Q-Kkp">
+                                                                <rect key="frame" x="67.5" y="320" width="240" height="0.0"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="hcT-bo-BEd"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="200" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tc-rL-n2V">
+                                                                <rect key="frame" x="37.5" y="340" width="300" height="60"/>
+                                                                <color key="backgroundColor" name="royalBlue"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="79G-Lh-sVF">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Kf8-wD-1MU">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="475"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="d2D-dP-7rU">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="175"/>
+                                                                    </constraint>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
+                                                                <state key="normal" title="What Should I Wear Today?">
+                                                                    <color key="titleColor" name="lightBlue"/>
+                                                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
+                                                                </variation>
+                                                                <connections>
+                                                                    <segue destination="dDb-Rm-SJH" kind="show" identifier="showClothingTableView" id="66o-XT-R8A"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="lightBlue"/>
+                                        <constraints>
+                                            <constraint firstItem="Ygz-ET-7lk" firstAttribute="top" secondItem="xJC-Ny-I2P" secondAttribute="top" id="2mV-PL-NP6"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ygz-ET-7lk" secondAttribute="trailing" id="ELs-DY-61p"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ygz-ET-7lk" secondAttribute="bottom" id="aRS-aw-I9t"/>
+                                            <constraint firstItem="Ygz-ET-7lk" firstAttribute="leading" secondItem="xJC-Ny-I2P" secondAttribute="leading" id="fXQ-34-RxI"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="lightBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xJC-Ny-I2P" secondAttribute="bottom" constant="10" id="B1B-0F-kNL"/>
+                                    <constraint firstItem="xJC-Ny-I2P" firstAttribute="top" secondItem="K50-wS-jFY" secondAttribute="top" constant="20" id="a1V-yV-0aR"/>
+                                    <constraint firstAttribute="trailing" secondItem="xJC-Ny-I2P" secondAttribute="trailing" id="j5o-Kp-49M"/>
+                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="xJC-Ny-I2P" secondAttribute="bottom" constant="60" id="mZK-uo-wwC"/>
+                                    <constraint firstItem="xJC-Ny-I2P" firstAttribute="leading" secondItem="K50-wS-jFY" secondAttribute="leading" id="vLi-gZ-Cn1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K50-wS-jFY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7Gu-dR-ETB"/>
+                            <constraint firstItem="K50-wS-jFY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g0a-eM-C2N"/>
+                            <constraint firstItem="K50-wS-jFY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h8c-Nq-F9V"/>
+                            <constraint firstAttribute="bottom" secondItem="K50-wS-jFY" secondAttribute="bottom" id="pge-ul-DAy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PFW-V8-myb"/>
+                    <connections>
+                        <outlet property="getWeatherButton" destination="0q5-Rb-IiC" id="oSQ-pY-Lad"/>
+                        <outlet property="searchBar" destination="SDr-Z5-qZ9" id="VGV-hG-TbS"/>
+                        <outlet property="temperatureImage" destination="5ys-Nz-mId" id="7Nh-4o-ytg"/>
+                        <outlet property="temperatureLabel" destination="1UC-DF-Oor" id="R8m-de-osf"/>
+                        <outlet property="weatherBackgroundView" destination="9FK-rg-HZS" id="FYn-kq-xBc"/>
+                        <outlet property="weatherDescriptionLabel" destination="W1n-Gn-0PG" id="15W-WG-rXJ"/>
+                        <outlet property="weatherImage" destination="Skx-ov-skA" id="deK-F7-2ps"/>
+                        <outlet property="whatToWearButton" destination="0tc-rL-n2V" id="Dyj-DG-kjH"/>
+                        <segue destination="JBq-c0-Q5s" kind="show" identifier="showFirstTimeView" animates="NO" id="bQp-Yt-7hj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchBar contentMode="redraw" id="SDr-Z5-qZ9">
+                    <rect key="frame" x="0.0" y="0.0" width="377" height="56"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" name="brightBlue"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+            </objects>
+            <point key="canvasLocation" x="-276" y="124.58770614692655"/>
+        </scene>
+        <!--Clothing Table View Controller-->
+        <scene sceneID="GLs-UH-j9B">
+            <objects>
+                <tableViewController id="dDb-Rm-SJH" customClass="ClothingTableViewController" customModule="WeatherDresser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BAH-Ag-DXP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="lightBlue"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" name="lightBlue"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="clothingCell" rowHeight="268" id="Wgu-Sx-kNJ" customClass="ClothingTableViewCell" customModule="WeatherDresser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="268"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" tableViewCell="Wgu-Sx-kNJ" id="MG1-SB-JoB">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="267.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="loG-zS-cpw">
+                                            <rect key="frame" x="186" y="77" width="163" height="70"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clothes Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ixv-Tg-00D">
+                                                    <rect key="frame" x="0.0" y="0.0" width="163" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="hDG-rS-G85"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="sud-WV-4p0">
+                                                            <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                                    </variation>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hc-Kc-Rr5">
+                                                    <rect key="frame" x="0.0" y="48" width="163" height="22"/>
+                                                    <state key="normal" image="unchecked"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8OS-xg-VOO">
+                                            <rect key="frame" x="16" y="30" width="150" height="207.5"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="23q-g0-5Js">
+                                                    <rect key="frame" x="2" y="12.5" width="148" height="183"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="23q-g0-5Js" secondAttribute="height" multiplier="148:183" id="be7-5L-wZg"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="royalBlue"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="1mN-Bb-ljv">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                                </constraint>
+                                                <constraint firstItem="23q-g0-5Js" firstAttribute="leading" secondItem="8OS-xg-VOO" secondAttribute="leading" constant="2" id="3Lq-8g-Vl4"/>
+                                                <constraint firstAttribute="trailing" secondItem="23q-g0-5Js" secondAttribute="trailing" id="GEO-hO-Q55"/>
+                                                <constraint firstItem="23q-g0-5Js" firstAttribute="centerY" secondItem="8OS-xg-VOO" secondAttribute="centerY" id="tdl-Zj-MwP"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" name="lightBlue"/>
+                                    <constraints>
+                                        <constraint firstItem="loG-zS-cpw" firstAttribute="top" secondItem="MG1-SB-JoB" secondAttribute="topMargin" constant="66" id="2yd-6x-ts4"/>
+                                        <constraint firstItem="8OS-xg-VOO" firstAttribute="top" secondItem="MG1-SB-JoB" secondAttribute="topMargin" constant="19" id="DnH-UK-YV5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="loG-zS-cpw" secondAttribute="trailing" constant="10" id="YFl-Im-fpi"/>
+                                        <constraint firstItem="8OS-xg-VOO" firstAttribute="centerY" secondItem="MG1-SB-JoB" secondAttribute="centerY" id="eai-Gv-OLA"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="loG-zS-cpw" secondAttribute="bottom" constant="120.5" id="frG-QX-yo8"/>
+                                        <constraint firstItem="loG-zS-cpw" firstAttribute="leading" secondItem="8OS-xg-VOO" secondAttribute="trailing" constant="20" id="qZS-On-sdI"/>
+                                        <constraint firstItem="8OS-xg-VOO" firstAttribute="leading" secondItem="MG1-SB-JoB" secondAttribute="leadingMargin" id="rRe-Sa-gW1"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <viewLayoutGuide key="safeArea" id="exa-PU-zS3"/>
+                                <connections>
+                                    <outlet property="checkButton" destination="7hc-Kc-Rr5" id="VIu-vC-IQZ"/>
+                                    <outlet property="clothingBackground" destination="8OS-xg-VOO" id="b7P-QB-2Vi"/>
+                                    <outlet property="clothingImage" destination="23q-g0-5Js" id="PYR-MM-caE"/>
+                                    <outlet property="clothingLabel" destination="ixv-Tg-00D" id="mBI-4I-yqo"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dDb-Rm-SJH" id="FNw-5i-EBH"/>
+                            <outlet property="delegate" destination="dDb-Rm-SJH" id="6Dd-XN-mFm"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="wMz-bh-erw" kind="show" identifier="showAllSetView" animates="NO" id="Upn-HH-o5v"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VsV-1P-ic5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576.79999999999995" y="124.58770614692655"/>
+        </scene>
+        <!--All Set View Controller-->
+        <scene sceneID="seu-dM-GG2">
+            <objects>
+                <viewController id="wMz-bh-erw" customClass="AllSetViewController" customModule="WeatherDresser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aLE-CW-yyF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9l-pg-qw0">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7u-Ll-d7m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy7-jz-ziu">
+                                        <rect key="frame" x="62.5" y="588" width="250" height="49"/>
+                                        <color key="backgroundColor" name="brightBlue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Nfh-x2-5Zh">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="350"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="26"/>
+                                        <state key="normal" title="Back to Weather">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="40"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="clickBackToWeather:" destination="wMz-bh-erw" eventType="touchUpInside" id="6AC-hh-R6J"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are ready to go!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5s-c3-YxV">
+                                        <rect key="frame" x="8" y="60" width="359" height="182"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="182" id="Twe-9e-mZf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="50"/>
+                                        <color key="textColor" name="royalBlue"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="60"/>
+                                        </variation>
+                                    </label>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lm5-jK-5Z0">
+                                        <rect key="frame" x="88" y="231" width="144" height="248"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Vy7-jz-ziu" secondAttribute="bottom" constant="30" id="87z-oJ-GQu"/>
+                                    <constraint firstItem="S5s-c3-YxV" firstAttribute="leading" secondItem="g7u-Ll-d7m" secondAttribute="leading" constant="8" id="K16-hK-8yE"/>
+                                    <constraint firstAttribute="trailing" secondItem="S5s-c3-YxV" secondAttribute="trailing" constant="8" id="beE-D4-QHl"/>
+                                    <constraint firstItem="S5s-c3-YxV" firstAttribute="top" secondItem="g7u-Ll-d7m" secondAttribute="top" constant="60" id="c9C-xc-Gpg"/>
+                                    <constraint firstItem="Vy7-jz-ziu" firstAttribute="centerX" secondItem="g7u-Ll-d7m" secondAttribute="centerX" id="hhE-ZK-gxr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="g7u-Ll-d7m" firstAttribute="bottom" secondItem="fjm-DQ-dfg" secondAttribute="bottom" id="NyO-zZ-rTN"/>
+                            <constraint firstItem="g7u-Ll-d7m" firstAttribute="leading" secondItem="fjm-DQ-dfg" secondAttribute="leading" id="RLu-Fw-WIh"/>
+                            <constraint firstItem="g7u-Ll-d7m" firstAttribute="trailing" secondItem="fjm-DQ-dfg" secondAttribute="trailing" id="XYS-i6-8eK"/>
+                            <constraint firstItem="g7u-Ll-d7m" firstAttribute="top" secondItem="aLE-CW-yyF" secondAttribute="top" id="sDF-cz-cfK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fjm-DQ-dfg"/>
+                    </view>
+                    <connections>
+                        <outlet property="backToWeather" destination="Vy7-jz-ziu" id="iq0-g6-Z9A"/>
+                        <outlet property="readyToGoLabel" destination="S5s-c3-YxV" id="86Q-du-zr5"/>
+                        <outlet property="runImageView" destination="lm5-jK-5Z0" id="QzC-9O-eHx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2n-cQ-lfE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1397.5999999999999" y="124.58770614692655"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WDf-NN-gv5">
+            <objects>
+                <navigationController id="aXu-GU-9Rc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QmX-jn-TFt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="brightBlue"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="brightBlue"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xWH-Z5-EcD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M28-8y-fzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1164" y="125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rain" width="141.87191772460938" height="120.88669586181641"/>
+        <image name="sun" width="163.79147338867188" height="163.79147338867188"/>
+        <image name="thunderstorm" width="141.87191772460938" height="122.71921539306641"/>
+        <image name="unchecked" width="16" height="16"/>
+        <namedColor name="brightBlue">
+            <color red="0.097999997437000275" green="0.76499998569488525" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gold">
+            <color red="1" green="0.80392156862745101" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightBlue">
+            <color red="0.88999998569488525" green="0.9570000171661377" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="royalBlue">
+            <color red="0.11400000005960464" green="0.44299998879432678" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bQp-Yt-7hj"/>
+        <segue reference="m0T-hb-ldM"/>
+    </inferredMetricsTieBreakers>
+</document>
